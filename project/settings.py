@@ -121,7 +121,9 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = (BASE_DIR/"asert/")
 
-LOGIN_REDIRET_URL = 'index'
+LOGIN_REDIRECT_URL = 'index'
+
+LOGIN_URL = 'user-login'
 
 
 # Default primary key field type
