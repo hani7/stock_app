@@ -15,7 +15,7 @@ class Product(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255 , null=True)
     description = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=3 , null=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2 , null=True)
     quantity = models.PositiveIntegerField(null=True)
     last_update = models.DateTimeField(auto_now=True)
     collection = models.ForeignKey(Collection, on_delete=models.PROTECT) 

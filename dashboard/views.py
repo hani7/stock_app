@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from .models import Product
 
 # Create your views here.
 
@@ -11,7 +13,13 @@ def staff(request):
 
 
 def product(request):
-    return render(request, 'dashboard/product.html')
+    items = Product.objects.all() 
+    #items = Product.objects.raw('SELECT * FROM product')
+
+    context = {
+        'items' : items,
+    }
+    return render(request, 'dashboard/product.html' , context)
 
 
 def order(request):

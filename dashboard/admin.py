@@ -14,7 +14,7 @@ class CollectionAdmin(admin.ModelAdmin):
         return collection.products_count
     
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('id','title' , 'formatted_price', 'quantity' ,'last_update')
+    list_display = ('id','title' ,'collection' , 'formatted_price', 'quantity' ,'last_update')
     list_filter = ['collection']
     
     def formatted_price(self, obj):
