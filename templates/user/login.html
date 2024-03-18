@@ -1,15 +1,30 @@
-{% extends 'part/base.html' %} {% block title %} Login Page{% endblock %} {% block content %}
+{% extends 'part/base.html' %}
+{% block title %} Login Page{% endblock %}
+
+{% block content %}
 
 <div class="container">
     <div class="row mt-5">
-        <div class="col-md-6">
+        <div class="col-md-6 offset-md-3">
             <div class="border bg-white">
                 <h3>Login</h3>
+<<<<<<< HEAD
                 <form method = "POST">
                 </form>
+=======
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+
+                    <button class="btn btn-success" ype="submit" name="login">login</button>
+
+                </form>
+
+>>>>>>> 6ac7bce40dc25d30f7b4da78390808ad0c184757
             </div>
         </div>
     </div>
+</div>    
 
 
-    {% endblock %}
+{% endblock %}
